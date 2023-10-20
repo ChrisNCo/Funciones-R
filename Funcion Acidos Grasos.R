@@ -26,13 +26,6 @@ atp_ag = function(C, ins = 0){
   }
 
   #Error 3:
-  #Revisa si el acido graso posee menos insaturaciones que carbonos,
-  #ya que es imposible que hayan mas enlaces que carbonos.
-  if(ins > C){
-    stop("Un acido graso no puede tener mas insaturaciones que carbonos")
-  }
-
-  #Error 4:
   #Revisa para un acido graso par, si el numero de insaturaciones es 1/2 del numero
   #de carbonos, ya que 2 carbonos continuos no pueden tener ambos una insaturacion.
   if(C %% 2 == 0 & ins > C/2){
@@ -41,7 +34,7 @@ atp_ag = function(C, ins = 0){
                 " insaturaciones"))
   }
 
-  #Error 5:
+  #Error 4:
   #Revisa para un acido graso par, si el numero de insaturaciones es 1/2 del numero de
   #carbonos menos 1, ya que 2 carbonos continuos no pueden tener ambos una insaturacion.
   if(C %% 2 > 0 & ins > (C-1)/2){
