@@ -19,8 +19,8 @@ atp_ag = function(C, ins = 0){
   }
 
   #Error 2:
-  #Revisa si el acido graso posee menos de 6 insaturaciones, ya que
-  # no existen naturalmente acidos grasos con mas de 5 insaturaciones.
+  #Revisa si el acido graso posee menos de 7 insaturaciones, ya que
+  # no existen naturalmente acidos grasos con mas de 6 insaturaciones.
   if(ins > 6){
     stop("La cadena no puede poseer mas de 6 insaturaciones")
   }
